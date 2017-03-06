@@ -1,0 +1,1 @@
+SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="0483", MODE="666", GROUP="nogroup", SYMLINK+="sub20"
