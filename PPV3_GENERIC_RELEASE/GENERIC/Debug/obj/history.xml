@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m0 -mthumb -Wall -ffunction-sections -g -O0 -Wno-format -c -DCONFIG_HAVE_64BITS -DCONFIG_GENERIC -DSTM32F072RB -DCONFIG_RTLS_FULL_LOC -DCONFIG_RTLS_DYNAMIC_CONFIG -DUWB_COM_CAN_ANSWER -DCONFIG_ACTIVATE_UART_SHELL -DCONFIG_ACTIVATE_ADVANCEDUART_SHELL -DSHELL_SHOW_HELP -DADVANCEDSHELL_SHOW_HELP -DCONFIG_HIDE_COMCMD_INFO -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\OSAL\OSAL -I..\..\..\..\..\Users\tim95\Desktop\case\STM32CMSIS\cmsis_lib\include -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\OSAL\OSAL\STM32F072 -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\module -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\COM_MODULE -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\OSAL\include -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\shell -I..\..\..\..\..\Users\tim95\Desktop\case\UWB -I..\..\..\..\..\Users\tim95\Desktop\case\STM32CMSIS\cmsis_boot -I..\..\..\..\..\Users\tim95\Desktop\case -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\include -I..\..\..\..\..\Users\tim95\Desktop\case\STM32CMSIS\cmsis_lib -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\OSAL -I..\..\..\..\..\Users\tim95\Desktop\case\PPV3_GENERIC_RELEASE -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\OSAL\OSAL\STM32F072\include -I..\..\..\..\..\Users\tim95\Desktop -I..\..\..\..\..\Users\tim95\Desktop\case -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\config -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\COM_MODULE\common -I..\..\..\..\..\Users\tim95\Desktop\case\HAL -I..\..\..\..\..\Users\tim95\Desktop\case\STM32CMSIS -I..\..\..\..\..\Users\tim95\Desktop\case\UWB\common -I..\..\..\..\..\Users\tim95\Desktop\case\STM32CMSIS\cmsis_core">
+      <target file="system_stm32f0xx.o" lastModified="15aa41bc8a0">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_boot\system_stm32f0xx.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="USART.o" lastModified="15aa41bcf6b">
+         <source file="..\..\..\HAL_src\USART.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="syscalls.o" lastModified="15aa41bc5a5">
+         <source file="..\..\..\..\STM32CMSIS\syscalls\syscalls.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="ShellCommand_misc.o" lastModified="15aa41bcd2f">
+         <source file="..\..\..\..\UWB\shell\ShellCommand_misc.c" lastModified="15aa3d49cc3"/>
+      </target>
+      <target file="stm32f0xx_crc.o" lastModified="15aa41bb679">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_crc.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="RTC.o" lastModified="15aa41bceb2">
+         <source file="..\..\..\HAL_src\RTC.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="uwbmodule_com_specific.o" lastModified="15aa41bcdce">
+         <source file="..\..\..\..\UWB\COM_MODULE\specific\uwbmodule_com_specific.c" lastModified="151add4e770"/>
+      </target>
+      <target file="ShellCommand_system.o" lastModified="15aa41bcbdd">
+         <source file="..\..\..\..\UWB\shell\ShellCommand_system.c" lastModified="151add4e770"/>
+      </target>
+      <target file="RCC.o" lastModified="15aa41bbaf5">
+         <source file="..\..\..\HAL_src\RCC.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="ACCELERO.o" lastModified="15aa41bb87a">
+         <source file="..\..\..\HAL_src\ACCELERO.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="DAC.o" lastModified="15aa41bb840">
+         <source file="..\..\..\HAL_src\DAC.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="pinpointer_config.o" lastModified="15aa41bbaa1">
+         <source file="..\..\..\..\UWB\config\pinpointer_config.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_i2c.o" lastModified="15aa41bc1b2">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_i2c.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="ADC.o" lastModified="15aa41bbdca">
+         <source file="..\..\..\HAL_src\ADC.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_spi.o" lastModified="15aa41bc0b4">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_spi.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_comp.o" lastModified="15aa41bc320">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_comp.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_crs.o" lastModified="15aa41bc6a6">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_crs.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="utils.o" lastModified="15aa41bbbb2">
+         <source file="..\..\..\..\UWB\utils.c" lastModified="151add4e770"/>
+      </target>
+      <target file="uwbmodule_com_common.o" lastModified="15aa41bc207">
+         <source file="..\..\..\..\UWB\COM_MODULE\common\uwbmodule_com_common.c" lastModified="151add4e770"/>
+      </target>
+      <target file="prodSection_read.o" lastModified="15aa41bc035">
+         <source file="..\..\..\..\UWB\config\prodSection_read.c" lastModified="151add4e770"/>
+      </target>
+      <target file="ShellCommand_radio.o" lastModified="15aa41bbb83">
+         <source file="..\..\..\..\UWB\shell\ShellCommand_radio.c" lastModified="151add4e770"/>
+      </target>
+      <target file="EXTI.o" lastModified="15aa41bc279">
+         <source file="..\..\..\HAL_src\EXTI.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="GPIO.o" lastModified="15aa41bbca8">
+         <source file="..\..\..\HAL_src\GPIO.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="osal_time.o" lastModified="15aa41bd165">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_time.c" lastModified="151add4e770"/>
+      </target>
+      <target file="osal_trace_STM32.o" lastModified="15aa41bd06c">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_trace_STM32.c" lastModified="151add4e770"/>
+      </target>
+      <target file="pp_conf_common.o" lastModified="15aa41bb932">
+         <source file="..\..\..\..\UWB\config\pp_conf_common.c" lastModified="151add4e770"/>
+      </target>
+      <target file="TIMER.o" lastModified="15aa41bbd67">
+         <source file="..\..\..\HAL_src\TIMER.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_exti.o" lastModified="15aa41bca89">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_exti.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_iwdg.o" lastModified="15aa41bb8bd">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_iwdg.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="module_api_radio.o" lastModified="15aa41bbf9b">
+         <source file="..\..\..\..\UWB\module\module_api_radio.c" lastModified="151add4e770"/>
+      </target>
+      <target file="osal_math.o" lastModified="15aa41bc955">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_math.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_gpio.o" lastModified="15aa41bc2d4">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_gpio.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="SPI.o" lastModified="15aa41bc922">
+         <source file="..\..\..\HAL_src\SPI.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="Ext_Com.o" lastModified="15aa41bbe1f">
+         <source file="..\..\..\..\UWB\COM_MODULE\Ext_Com.c" lastModified="151add4e770"/>
+      </target>
+      <target file="pinpointer_hw.o" lastModified="15aa41bb77e">
+         <source file="..\..\..\..\UWB\pinpointer_hw.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_tim.o" lastModified="15aa41bc7ac">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_tim.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="I2C.o" lastModified="15aa41bc009">
+         <source file="..\..\..\HAL_src\I2C.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="osal_synch.o" lastModified="15aa41bbfc8">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_synch.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_dbgmcu.o" lastModified="15aa41bcc24">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_dbgmcu.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="module_api_sys.o" lastModified="15aa41bc44e">
+         <source file="..\..\..\..\UWB\module\module_api_sys.c" lastModified="151add4e770"/>
+      </target>
+      <target file="osal_comp.o" lastModified="15aa41bcd62">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_comp.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_syscfg.o" lastModified="15aa41bce18">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_syscfg.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="module_api_seq.o" lastModified="15aa41bbc29">
+         <source file="..\..\..\..\UWB\module\module_api_seq.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_usart.o" lastModified="15aa41bc648">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_usart.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_wwdg.o" lastModified="15aa41bcace">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_wwdg.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="startup_stm32f0xx.o" lastModified="15aa41bbb02">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_boot\startup\startup_stm32f0xx.s" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_cec.o" lastModified="15aa41bb98f">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_cec.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="msq_config.o" lastModified="15aa41bc124">
+         <source file="..\..\..\..\UWB\config\msq_config.c" lastModified="151add4e770"/>
+      </target>
+      <target file="printf.o" lastModified="15aa41bbead">
+         <source file="..\..\..\..\STM32CMSIS\stdio\printf.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_rtc.o" lastModified="15aa41bc55d">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_rtc.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_rcc.o" lastModified="15aa41bb715">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_rcc.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_dac.o" lastModified="15aa41bd12a">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_dac.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_can.o" lastModified="15aa41bd014">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_can.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_pwr.o" lastModified="15aa41bcf09">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_pwr.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_flash.o" lastModified="15aa41bc9eb">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_flash.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_adc.o" lastModified="15aa41bb7fa">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_adc.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="main.o" lastModified="15aa41bb9ee">
+         <source file="..\..\..\..\UWB\main.c" lastModified="151add4e770"/>
+      </target>
+      <target file="osal_stdlib.o" lastModified="15aa41bca3e">
+         <source file="..\..\..\..\UWB\OSAL\OSAL\STM32F072\src\osal_stdlib.c" lastModified="151add4e770"/>
+      </target>
+      <target file="shell.o" lastModified="15aa41bc85a">
+         <source file="..\..\..\..\UWB\shell\shell.c" lastModified="151add4e770"/>
+      </target>
+      <target file="stm32f0xx_misc.o" lastModified="15aa41bd0c4">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_misc.c" lastModified="151add4dfa0"/>
+      </target>
+      <target file="stm32f0xx_dma.o" lastModified="15aa41bbcf9">
+         <source file="..\..\..\..\STM32CMSIS\cmsis_lib\source\stm32f0xx_dma.c" lastModified="151add4dfa0"/>
+      </target>
+   </processor>
+</history>

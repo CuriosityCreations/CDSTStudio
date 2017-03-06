@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 2.0.0" name="Module">
+  <Target name="GENERIC" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="480" chipName="STM32F072RB" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-Wno-format"/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="../"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="CONFIG_HAVE_64BITS"/>
+          <Define name="CONFIG_GENERIC"/>
+          <Define name="STM32F072RB"/>
+          <Define name="CONFIG_RTLS_FULL_LOC"/>
+          <Define name="CONFIG_RTLS_DYNAMIC_CONFIG"/>
+          <Define name="UWB_COM_CAN_ANSWER"/>
+          <Define name="CONFIG_ACTIVATE_UART_SHELL"/>
+          <Define name="CONFIG_ACTIVATE_ADVANCEDUART_SHELL"/>
+          <Define name="SHELL_SHOW_HELP"/>
+          <Define name="ADVANCEDSHELL_SHOW_HELP"/>
+          <Define name="CONFIG_HIDE_COMCMD_INFO"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="UserEditLinker" value="--entry=main; -lm; "/>
+        <LinkedLibraries>
+          <Libset dir="..\LTA_LIB\" libs="bespoon_LTA_official"/>
+        </LinkedLibraries>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x0001EF00" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00004000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/module/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="Module"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="1" value="${project.path}\..\BESPOON_Extra_tools\mapToHtml.bat ${project.path} GENERIC ${project.path}\ppv3_generic_release.html 0"/>
+        <UserRun name="Run#2" type="After" checked="1" value="${project.path}\..\BESPOON_Extra_tools\cvtToBspDfu.bat ${project.path} GENERIC ${project.path}\..\firmware\ppv3_generic_release"/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F07xx_128.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="31" name="Retarget printf" path="" type="2"/>
+    <Component id="46" name="M0 Cmsis Core" path="" type="2"/>
+    <Component id="1079" name="cmsis_boot" path="" type="2"/>
+    <Component id="1080" name="RCC" path="" type="2"/>
+    <Component id="1081" name="GPIO" path="" type="2"/>
+    <Component id="1082" name="ADC" path="" type="2"/>
+    <Component id="1087" name="DAC" path="" type="2"/>
+    <Component id="1088" name="DBGMCU" path="" type="2"/>
+    <Component id="1089" name="DMA" path="" type="2"/>
+    <Component id="1090" name="EXTI" path="" type="2"/>
+    <Component id="1092" name="I2C" path="" type="2"/>
+    <Component id="1094" name="MISC" path="" type="2"/>
+    <Component id="1095" name="PWR" path="" type="2"/>
+    <Component id="1096" name="RTC" path="" type="2"/>
+    <Component id="1097" name="SPI" path="" type="2"/>
+    <Component id="1098" name="SYSCFG" path="" type="2"/>
+    <Component id="1099" name="TIM" path="" type="2"/>
+    <Component id="1100" name="USART" path="" type="2"/>
+    <Component id="1102" name="CRS" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="UWB/common/pp_hw_types.h" path="../UWB/common/pp_hw_types.h" type="1"/>
+    <File name="UWB/include/afc_filter_api.h" path="../UWB/include/afc_filter_api.h" type="1"/>
+    <File name="UWB/release_note.h" path="../UWB/release_note.h" type="1"/>
+    <File name="UWB/common/memPool.h" path="../UWB/common/memPool.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_rcc.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_rcc.h" type="1"/>
+    <File name="UWB/shell/ShellCommand_radio.c" path="../UWB/shell/ShellCommand_radio.c" type="1"/>
+    <File name="UWB/config/prodSection_read.h" path="../UWB/config/prodSection_read.h" type="1"/>
+    <File name="UWB/include/unit_test_api.h" path="../UWB/include/unit_test_api.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_crs.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_crs.h" type="1"/>
+    <File name="UWB/common/time_types.h" path="../UWB/common/time_types.h" type="1"/>
+    <File name="UWB/OSAL/include/osal_comp.h" path="../UWB/OSAL/include/osal_comp.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_exti.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_exti.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_dac.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_dac.h" type="1"/>
+    <File name="UWB/config/msq_config.h" path="../UWB/config/msq_config.h" type="1"/>
+    <File name="UWB/COM_MODULE" path="" type="2"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_misc.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_misc.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot/startup" path="" type="2"/>
+    <File name="UWB/module/module.h" path="../UWB/module/module.h" type="1"/>
+    <File name="HAL/DAC.h" path="../HAL/dac.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_rcc.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_rcc.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source" path="" type="2"/>
+    <File name="HAL_src/ACCELERO.c" path="HAL_src/ACCELERO.c" type="1"/>
+    <File name="HAL_src" path="" type="2"/>
+    <File name="UWB/config/pp_conf_common.c" path="../UWB/config/pp_conf_common.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_dac.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_dac.c" type="1"/>
+    <File name="HAL/ADC.h" path="../HAL/ADC.h" type="1"/>
+    <File name="UWB/COM_MODULE/specific" path="" type="2"/>
+    <File name="HAL_src/I2C.c" path="HAL_src/I2C.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_spi.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_spi.h" type="1"/>
+    <File name="HAL_src/USART.c" path="HAL_src/USART.c" type="1"/>
+    <File name="UWB/module/module_api_seq.c" path="../UWB/module/module_api_seq.c" type="1"/>
+    <File name="UWB/config/msq_config.c" path="../UWB/config/msq_config.c" type="1"/>
+    <File name="HAL_src/TIMER.c" path="HAL_src/TIMER.c" type="1"/>
+    <File name="UWB/common/config_api.h" path="../UWB/common/config_api.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_usart.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_usart.h" type="1"/>
+    <File name="UWB/config/ProdSectionDef.h" path="../UWB/config/ProdSectionDef.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/include" path="" type="2"/>
+    <File name="utils.c" path="../UWB/utils.c" type="1"/>
+    <File name="UWB/config/init_config.h" path="../UWB/config/init_config.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_iwdg.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_iwdg.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_comp.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_comp.c" type="1"/>
+    <File name="UWB/common/types.h" path="../UWB/common/types.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_adc.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_adc.h" type="1"/>
+    <File name="HAL/SPI.h" path="../HAL/SPI.h" type="1"/>
+    <File name="UWB/shell/ShellCommand_system.h" path="../UWB/shell/ShellCommand_system.h" type="1"/>
+    <File name="UWB/config" path="" type="2"/>
+    <File name="UWB/OSAL/include/osal_math.h" path="../UWB/OSAL/include/osal_math.h" type="1"/>
+    <File name="UWB/OSAL/include" path="" type="2"/>
+    <File name="UWB/include/pinpointer_hw_api.h" path="../UWB/include/pinpointer_hw_api.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_comp.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_comp.h" type="1"/>
+    <File name="UWB/OSAL" path="" type="2"/>
+    <File name="HAL/I2C.h" path="../HAL/I2C.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_exti.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_exti.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot/startup/startup_stm32f0xx.s" path="../STM32CMSIS/cmsis_boot/startup/startup_stm32f0xx.s" type="1"/>
+    <File name="UWB/common/power_mode_types.h" path="../UWB/common/power_mode_types.h" type="1"/>
+    <File name="UWB/include/conf_common_api.h" path="../UWB/include/conf_common_api.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_cec.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_cec.c" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_trace_STM32.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_trace_STM32.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_gpio.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_gpio.c" type="1"/>
+    <File name="UWB/shell/ShellCommand_radio.h" path="../UWB/shell/ShellCommand_radio.h" type="1"/>
+    <File name="HAL" path="" type="2"/>
+    <File name="UWB/shell/ShellCommand_misc.h" path="../UWB/shell/ShellCommand_misc.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_synch.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_synch.c" type="1"/>
+    <File name="UWB/config/pinpointer_config.c" path="../UWB/config/pinpointer_config.c" type="1"/>
+    <File name="UWB/OSAL/OSAL/include" path="" type="2"/>
+    <File name="UWB/common/framer_types.h" path="../UWB/common/framer_types.h" type="1"/>
+    <File name="UWB/include/live_threshold_adjustment_api.h" path="../UWB/include/live_threshold_adjustment_api.h" type="1"/>
+    <File name="UWB/include/time_helper_api.h" path="../UWB/include/time_helper_api.h" type="1"/>
+    <File name="UWB/include/ccal_api.h" path="../UWB/include/ccal_api.h" type="1"/>
+    <File name="UWB/shell/shell.c" path="../UWB/shell/shell.c" type="1"/>
+    <File name="STM32CMSIS/stdio/printf.c" path="../STM32CMSIS/stdio/printf.c" type="1"/>
+    <File name="UWB/shell/ShellCommand_system.c" path="../UWB/shell/ShellCommand_system.c" type="1"/>
+    <File name="UWB/COM_MODULE/specific/uwbmodule_com_specific.c" path="../UWB/COM_MODULE/specific/uwbmodule_com_specific.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_wwdg.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_wwdg.c" type="1"/>
+    <File name="HAL/RCC.h" path="../HAL/RCC.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/include/osal_trace_STM32.h" path="../UWB/OSAL/OSAL/STM32F072/include/osal_trace_STM32.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_adc.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_adc.c" type="1"/>
+    <File name="UWB/COM_MODULE/common" path="" type="2"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_time.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_time.c" type="1"/>
+    <File name="UWB/common/config_generic.h" path="../UWB/common/config_generic.h" type="1"/>
+    <File name="UWB/include/msq_config_api.h" path="../UWB/include/msq_config_api.h" type="1"/>
+    <File name="HAL_config.h" path="HAL_config.h" type="1"/>
+    <File name="UWB/module" path="" type="2"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src" path="" type="2"/>
+    <File name="UWB/shell" path="" type="2"/>
+    <File name="UWB/include/coreId.h" path="../UWB/include/coreId.h" type="1"/>
+    <File name="UWB/module/module_api_seq.h" path="../UWB/module/module_api_seq.h" type="1"/>
+    <File name="UWB/config/prodSection_read.c" path="../UWB/config/prodSection_read.c" type="1"/>
+    <File name="UWB/OSAL/include/osal_trace.h" path="../UWB/OSAL/include/osal_trace.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include" path="" type="2"/>
+    <File name="HAL/GPIO.h" path="../HAL/GPIO.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot" path="" type="2"/>
+    <File name="UWB/OSAL/include/osal_stdlib.h" path="../UWB/OSAL/include/osal_stdlib.h" type="1"/>
+    <File name="UWB/COM_MODULE/common/uwbmodule_com.h" path="../UWB/COM_MODULE/common/uwbmodule_com.h" type="1"/>
+    <File name="UWB/pinpointer_hw.c" path="../UWB/pinpointer_hw.c" type="1"/>
+    <File name="UWB/shell/shell.h" path="../UWB/shell/shell.h" type="1"/>
+    <File name="HAL_src/RCC.c" path="HAL_src/RCC.c" type="1"/>
+    <File name="UWB/config/msq_fw.h" path="../UWB/config/msq_fw.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_syscfg.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_syscfg.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_pwr.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_pwr.c" type="1"/>
+    <File name="UWB/shell/ShellCommand_misc.c" path="../UWB/shell/ShellCommand_misc.c" type="1"/>
+    <File name="HAL/RTC.h" path="../HAL/RTC.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_syscfg.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_syscfg.c" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_comp.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_comp.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_crc.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_crc.h" type="1"/>
+    <File name="HAL_src/RTC.c" path="HAL_src/RTC.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_crc.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_crc.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_dbgmcu.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_dbgmcu.c" type="1"/>
+    <File name="HAL_src/DAC.c" path="HAL_src/DAC.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_i2c.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_i2c.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_iwdg.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_iwdg.c" type="1"/>
+    <File name="HAL_src/SPI.c" path="HAL_src/SPI.c" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_math.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_math.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_dma.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_dma.c" type="1"/>
+    <File name="UWB/common/list.h" path="../UWB/common/list.h" type="1"/>
+    <File name="UWB/OSAL/include/osal_time.h" path="../UWB/OSAL/include/osal_time.h" type="1"/>
+    <File name="UWB/module/module_api_sys.h" path="../UWB/module/module_api_sys.h" type="1"/>
+    <File name="STM32CMSIS" path="" type="2"/>
+    <File name="HAL/USART.h" path="../HAL/USART.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_flash.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_flash.c" type="1"/>
+    <File name="UWB/common/pinpointer_common_def.h" path="../UWB/common/pinpointer_common_def.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_can.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_can.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_core/core_cm0.h" path="../STM32CMSIS/cmsis_core/core_cm0.h" type="1"/>
+    <File name="UWB/config/pm_config.h" path="../UWB/config/pm_config.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_dbgmcu.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_dbgmcu.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/src/osal_stdlib.c" path="../UWB/OSAL/OSAL/STM32F072/src/osal_stdlib.c" type="1"/>
+    <File name="HAL/EXTI.h" path="../HAL/EXTI.h" type="1"/>
+    <File name="UWB/config/prodSectionStruct.h" path="../UWB/config/prodSectionStruct.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot/stm32f0xx.h" path="../STM32CMSIS/cmsis_boot/stm32f0xx.h" type="1"/>
+    <File name="UWB/COM_MODULE/Ext_Com.c" path="../UWB/COM_MODULE/Ext_Com.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_gpio.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_gpio.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot/system_stm32f0xx.c" path="../STM32CMSIS/cmsis_boot/system_stm32f0xx.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_core" path="" type="2"/>
+    <File name="UWB/include/pinpointer_regs.h" path="../UWB/include/pinpointer_regs.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_can.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_can.c" type="1"/>
+    <File name="UWB/module/module_api_def.h" path="../UWB/module/module_api_def.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_pwr.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_pwr.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_wwdg.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_wwdg.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072/include/osal_type_STM32.h" path="../UWB/OSAL/OSAL/STM32F072/include/osal_type_STM32.h" type="1"/>
+    <File name="HAL/TIMER.h" path="../HAL/TIMER.h" type="1"/>
+    <File name="HAL_src/EXTI.c" path="HAL_src/EXTI.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_core/core_cmFunc.h" path="../STM32CMSIS/cmsis_core/core_cmFunc.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_flash.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_flash.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_spi.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_spi.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_rtc.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_rtc.h" type="1"/>
+    <File name="UWB/include/afc_api.h" path="../UWB/include/afc_api.h" type="1"/>
+    <File name="UWB/OSAL/OSAL/STM32F072" path="" type="2"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_i2c.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_i2c.c" type="1"/>
+    <File name="UWB/OSAL/include/osal_type.h" path="../UWB/OSAL/include/osal_type.h" type="1"/>
+    <File name="UWB/COM_MODULE/Ext_Com.h" path="../UWB/COM_MODULE/Ext_Com.h" type="1"/>
+    <File name="UWB/OSAL/include/osal_synch.h" path="../UWB/OSAL/include/osal_synch.h" type="1"/>
+    <File name="UWB/include/utils_api.h" path="../UWB/include/utils_api.h" type="1"/>
+    <File name="UWB/module/module_api_radio.c" path="../UWB/module/module_api_radio.c" type="1"/>
+    <File name="STM32CMSIS/syscalls/syscalls.c" path="../STM32CMSIS/syscalls/syscalls.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_core/core_cmInstr.h" path="../STM32CMSIS/cmsis_core/core_cmInstr.h" type="1"/>
+    <File name="UWB/include/msq_pm_seq.h" path="../UWB/include/msq_pm_seq.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_tim.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_tim.h" type="1"/>
+    <File name="UWB/include" path="" type="2"/>
+    <File name="UWB/common/scan_rf_types.h" path="../UWB/common/scan_rf_types.h" type="1"/>
+    <File name="UWB/common" path="" type="2"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_cec.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_cec.h" type="1"/>
+    <File name="UWB/include/framer_api.h" path="../UWB/include/framer_api.h" type="1"/>
+    <File name="UWB/OSAL/OSAL" path="" type="2"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_misc.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_misc.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/include/stm32f0xx_dma.h" path="../STM32CMSIS/cmsis_lib/include/stm32f0xx_dma.h" type="1"/>
+    <File name="UWB/module/module_api.h" path="../UWB/module/module_api.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_crs.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_crs.c" type="1"/>
+    <File name="UWB/module/module_api_sys.c" path="../UWB/module/module_api_sys.c" type="1"/>
+    <File name="HAL_src/ADC.c" path="HAL_src/ADC.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_rtc.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_rtc.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_usart.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_usart.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_boot/system_stm32f0xx.h" path="../STM32CMSIS/cmsis_boot/system_stm32f0xx.h" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib/source/stm32f0xx_tim.c" path="../STM32CMSIS/cmsis_lib/source/stm32f0xx_tim.c" type="1"/>
+    <File name="STM32CMSIS/cmsis_lib" path="" type="2"/>
+    <File name="UWB/COM_MODULE/common/uwbmodule_com_common.c" path="../UWB/COM_MODULE/common/uwbmodule_com_common.c" type="1"/>
+    <File name="UWB/include/spi_helper.h" path="../UWB/include/spi_helper.h" type="1"/>
+    <File name="UWB" path="" type="2"/>
+    <File name="HAL/ACCELERO.h" path="../HAL/ACCELERO.h" type="1"/>
+    <File name="HAL_src/GPIO.c" path="HAL_src/GPIO.c" type="1"/>
+    <File name="UWB/OSAL/include/osal_dac.h" path="../UWB/OSAL/include/osal_dac.h" type="1"/>
+    <File name="STM32CMSIS/syscalls" path="" type="2"/>
+    <File name="UWB/common/generic_types.h" path="../UWB/common/generic_types.h" type="1"/>
+    <File name="STM32CMSIS/stdio" path="" type="2"/>
+    <File name="UWB/module/module_api_radio.h" path="../UWB/module/module_api_radio.h" type="1"/>
+    <File name="UWB/module/module_api_internal.h" path="../UWB/module/module_api_internal.h" type="1"/>
+    <File name="UWB/main.c" path="../UWB/main.c" type="1"/>
+  </Files>
+</Project>
