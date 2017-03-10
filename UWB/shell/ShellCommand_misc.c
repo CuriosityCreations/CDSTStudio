@@ -621,7 +621,7 @@ static void twoWayRngDoProcess(OSAL_u16 status)
 		OSAL_u8* seqBuf;
 		OSAL_u16 seqBufsize=0;
 		OSAL_u16 doShowRng=0;
-		//get current IT, adn upgrade seq sequence etc....
+		//get current IT, and upgrade seq sequence etc....
 		switch(twState&0xF)
 		{
 			//wait until seq started
